@@ -32,15 +32,16 @@ public class Passenger {
     private Flight flight;
 
     public Passenger(String identifier, String name, String countryCode) {
-        if (!Arrays.asList(Locale.getISOCountries()).contains(countryCode)) {
-            throw new IllegalArgumentException("Invalid country code");
-        }
-
+        validCountryCode(countryCode);
         this.identifier = identifier;
         this.name = name;
         this.countryCode = countryCode;
     }
-
+    private void validCountryCode(String countryCode) {
+        if (countryCode == null || !Arrays.asList(Locale.getISOCountries()).contains(countryCode)) {
+            throw new IllegalArgumentException("Invalid country code");
+        }
+    }
     public String getIdentifier() {
         return identifier;
     }

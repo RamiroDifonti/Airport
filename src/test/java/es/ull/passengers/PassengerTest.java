@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class PassengerTest {
-
     @Test
     void testValidPassenger() {
         // Arrange
@@ -35,6 +34,10 @@ class PassengerTest {
         assertEquals("Invalid country code", exception.getMessage());
     }
 
+    @Test
+    void testNullCountryCode() {
+        assertThrows(IllegalArgumentException.class, () -> new Passenger("456", "Bob", null));
+    }
     @Test
     void testJoinFlight() {
         // Arrange

@@ -1,15 +1,0 @@
-
->es.ull.passengers.Passenger#getCountryCode()Ljava/lang/String;^
-T/home/ramirodifonti/Descargas/Airport/src/main/java/es/ull/passengers/Passenger.java4 4( "1*­
-15 5(x
-v
-5 5(
-%0java.lang.String"__id*L
-
-__unknown_file (0*.
-es.ull.passengers.Passenger"
-countryCode"$
-5 5(
-
-%0java.lang.StringB
-es.ull.passengers.PassengerH

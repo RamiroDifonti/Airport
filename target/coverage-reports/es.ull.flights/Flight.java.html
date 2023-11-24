@@ -55,7 +55,7 @@ public class Flight {
 
     public boolean addPassenger(Passenger passenger) {
 <span class="fc bfc" id="L57" title="All 2 branches covered.">        if (getNumberOfPassengers() &gt;= seats) {</span>
-<span class="fc" id="L58">            throw new RuntimeException(&quot;Not enough seats for flight &quot; + getFlightNumber());</span>
+<span class="fc" id="L58">            throw new IllegalArgumentException(&quot;Not enough seats for flight &quot; + getFlightNumber());</span>
         }
 <span class="fc" id="L60">        passenger.setFlight(this);</span>
 <span class="fc" id="L61">        return passengers.add(passenger);</span>

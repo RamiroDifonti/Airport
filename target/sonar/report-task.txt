@@ -1,7 +1,0 @@
-organization=ramirodifonti
-projectKey=com.manning.junitbook:Airport
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.50887
-dashboardUrl=https://sonarcloud.io/dashboard?id=com.manning.junitbook%3AAirport
-ceTaskId=AYwCJyBtmTsxE6cWgekm
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYwCJyBtmTsxE6cWgekm

@@ -4,10 +4,10 @@ import es.ull.flights.Flight;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class PassengerTest {
+class PassengerTest {
 
     @Test
-    public void testValidPassenger() {
+    void testValidPassenger() {
         // Arrange
         String validIdentifier = "ID123";
         String validName = "John Doe";
@@ -23,7 +23,7 @@ public class PassengerTest {
     }
 
     @Test
-    public void testInvalidCountryCode() {
+    void testInvalidCountryCode() {
         // Arrange
         String invalidIdentifier = "ID456";
         String validName = "Jane Smith";
@@ -36,7 +36,7 @@ public class PassengerTest {
     }
 
     @Test
-    public void testJoinFlight() {
+    void testJoinFlight() {
         // Arrange
         Passenger passenger = new Passenger("ID789", "Alice Johnson", "GB");
         Flight flight = new Flight("AB1234", 2);
@@ -50,7 +50,7 @@ public class PassengerTest {
     }
 
     @Test
-    public void testJoinFlightWithNoSeats() {
+    void testJoinFlightWithNoSeats() {
         // Arrange
         Passenger passenger1 = new Passenger("ID111", "Tom Brown", "FR");
         Passenger passenger2 = new Passenger("ID222", "Lisa Davis", "DE");

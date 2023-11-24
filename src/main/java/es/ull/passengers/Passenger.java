@@ -33,7 +33,7 @@ public class Passenger {
 
     public Passenger(String identifier, String name, String countryCode) {
         if (!Arrays.asList(Locale.getISOCountries()).contains(countryCode)) {
-            throw new RuntimeException("Invalid country code");
+            throw new IllegalArgumentException("Invalid country code");
         }
 
         this.identifier = identifier;
@@ -59,16 +59,12 @@ public class Passenger {
 
     public void joinFlight(Flight flight) {
         Flight previousFlight = this.flight;
-        if (null != previousFlight) {
-            if (!previousFlight.removePassenger(this)) {
-                throw new RuntimeException("Cannot remove passenger");
-            }
+        if (null != previousFlight && !previousFlight.removePassenger(this)) {
+            throw new IllegalArgumentException("Cannot remove passenger");
         }
         setFlight(flight);
-        if (null != flight) {
-            if (!flight.addPassenger(this)) {
-                throw new RuntimeException("Cannot add passenger");
-            }
+        if (null != flight && !flight.addPassenger(this)) {
+            throw new IllegalArgumentException("Cannot add passenger");
         }
     }
 

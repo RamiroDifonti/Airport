@@ -39,7 +39,7 @@ public class Flight {
     public Flight(String flightNumber, int seats) {
         Matcher matcher = pattern.matcher(flightNumber);
         if (!matcher.matches()) {
-            throw new RuntimeException("Invalid flight number");
+            throw new IllegalArgumentException("Invalid flight number");
         }
         this.flightNumber = flightNumber;
         this.seats = seats;

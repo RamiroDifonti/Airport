@@ -5,10 +5,10 @@ import es.ull.passengers.Passenger;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FlightPassengersTest {
+class FlightPassengersTest {
 
     @Test
-    public void testJoinFlight() {
+    void testJoinFlight() {
         Flight flight = new Flight("AB1234", 2);
         Passenger passenger = new Passenger("ID1", "John Doe", "US");
 
@@ -19,7 +19,7 @@ public class FlightPassengersTest {
     }
 
     @Test
-    public void testJoinFlightWithNoSeats() {
+    void testJoinFlightWithNoSeats() {
         Flight flight = new Flight("AB1234", 1);
         Passenger passenger1 = new Passenger("ID1", "John Doe", "US");
         Passenger passenger2 = new Passenger("ID2", "Jane Smith", "AR");

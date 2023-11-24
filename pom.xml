@@ -25,7 +25,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version> <!-- La versión puede variar -->
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -41,17 +41,47 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/coverage-reports</outputDirectory>
+                    <!-- Other configurations -->
+                </configuration>
             </plugin>
 
             <!-- Plugin SonarScanner -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.0.2155</version> <!-- La versión puede variar -->
-            </plugin>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.9.0.2155</version>
+                    <configuration>
+                        <properties>
+                            <!-- Sonar properties -->
+                            <!-- Other Sonar properties -->
+                        </properties>
+                    </configuration>
+                </plugin>
         </plugins>
     </build>
-
+    <profiles>
+        <profile>
+            <id>coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonarsource.scanner.maven</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
+                        <version>3.9.0.2155</version>
+                        <configuration>
+                            <properties>
+                                <!-- Sonar properties -->
+                                <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/coverage-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+                                <!-- Other Sonar properties -->
+                            </properties>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/ramirodifonti/Descargas/Airport/target/surefire/surefirebooter10793913504718337870.jar /home/ramirodifonti/Descargas/Airport/target/surefire 2023-11-24T12-11-32_601-jvmRun1 surefire8742804526630987197tmp surefire_0298463114697273018tmp"/>
+    <property name="sun.java.command" value="/home/ramirodifonti/Descargas/Airport/target/surefire/surefirebooter13049544941061015553.jar /home/ramirodifonti/Descargas/Airport/target/surefire 2023-11-24T12-16-02_081-jvmRun1 surefire12037884820386673252tmp surefire_016664873066205172158tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/ramirodifonti/Descargas/Airport/target/test-classes:/home/ramirodifonti/Descargas/Airport/target/classes:/home/ramirodifonti/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/ramirodifonti/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/ramirodifonti/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/ramirodifonti/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/ramirodifonti/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/ramirodifonti/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/ramirodifonti/Descargas/Airport/target/surefire/surefirebooter10793913504718337870.jar"/>
+    <property name="surefire.real.class.path" value="/home/ramirodifonti/Descargas/Airport/target/surefire/surefirebooter13049544941061015553.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.20.1+1-post-Ubuntu-0ubuntu122.04"/>
     <property name="user.name" value="ramirodifonti"/>
@@ -58,10 +58,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testGetNumberOfPassengers" classname="es.ull.flights.FlightTest" time="0.029"/>
+  <testcase name="testGetNumberOfPassengers" classname="es.ull.flights.FlightTest" time="0.027"/>
   <testcase name="testRemoveNonExistingPassenger" classname="es.ull.flights.FlightTest" time="0.001"/>
-  <testcase name="testGetFlightNumber" classname="es.ull.flights.FlightTest" time="0.004"/>
+  <testcase name="testGetFlightNumber" classname="es.ull.flights.FlightTest" time="0.005"/>
   <testcase name="testAddPassengerExceedingSeats" classname="es.ull.flights.FlightTest" time="0.003"/>
   <testcase name="testAddPassenger" classname="es.ull.flights.FlightTest" time="0.002"/>
-  <testcase name="testRemovePassenger" classname="es.ull.flights.FlightTest" time="0"/>
+  <testcase name="testRemovePassenger" classname="es.ull.flights.FlightTest" time="0.001"/>
 </testsuite>

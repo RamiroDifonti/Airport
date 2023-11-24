@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.manning.junitbook</groupId>
-    <artifactId>ch13-continuous</artifactId>
+    <artifactId>Airport</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <name>ch13-continuous</name>
+    <name>Airport</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.organization>ramirodifonti</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <build>
@@ -43,25 +45,32 @@
                 </executions>
                 <configuration>
                     <outputDirectory>${project.build.directory}/coverage-reports</outputDirectory>
-                    <!-- Other configurations -->
+                    <!-- Otras configuraciones -->
                 </configuration>
+            </plugin>
+            <!-- Plugin del scanner de Sonar -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.10.0.2594</version>
             </plugin>
         </plugins>
     </build>
+
     <profiles>
         <profile>
             <id>coverage</id>
             <build>
                 <plugins>
+                    <!-- Plugin para enviar la cobertura de Jacoco a Sonar -->
                     <plugin>
                         <groupId>org.sonarsource.scanner.maven</groupId>
                         <artifactId>sonar-maven-plugin</artifactId>
-                        <version>3.9.0.2155</version>
                         <configuration>
                             <properties>
-                                <!-- Sonar properties -->
+                                <!-- Propiedades de Sonar -->
                                 <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/coverage-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-                                <!-- Other Sonar properties -->
+                                <!-- Otras propiedades de Sonar -->
                             </properties>
                         </configuration>
                     </plugin>
@@ -69,7 +78,9 @@
             </build>
         </profile>
     </profiles>
+
     <dependencies>
+        <!-- Dependencias del proyecto -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

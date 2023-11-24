@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.flights.FlightTest" time="0.052" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.flightspassengers.FlightPassengersTest" time="0" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -58,10 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testGetNumberOfPassengers" classname="es.ull.flights.FlightTest" time="0.027"/>
-  <testcase name="testRemoveNonExistingPassenger" classname="es.ull.flights.FlightTest" time="0.001"/>
-  <testcase name="testGetFlightNumber" classname="es.ull.flights.FlightTest" time="0.005"/>
-  <testcase name="testAddPassengerExceedingSeats" classname="es.ull.flights.FlightTest" time="0.003"/>
-  <testcase name="testAddPassenger" classname="es.ull.flights.FlightTest" time="0.002"/>
-  <testcase name="testRemovePassenger" classname="es.ull.flights.FlightTest" time="0"/>
+  <testcase name="testJoinFlightWithNoSeats" classname="es.ull.flightspassengers.FlightPassengersTest" time="0"/>
+  <testcase name="testJoinFlight" classname="es.ull.flightspassengers.FlightPassengersTest" time="0"/>
 </testsuite>

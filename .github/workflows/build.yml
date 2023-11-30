@@ -37,4 +37,4 @@ jobs:
         run: |
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=RamiroDifonti_Airport \
-            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml # Ruta al informe de cobertura
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/coverage-reports # Ruta al informe de cobertura
